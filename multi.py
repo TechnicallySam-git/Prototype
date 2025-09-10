@@ -19,10 +19,15 @@ ARENA_HEIGHT = 800
 TOP_MARGIN = 80
 TICK_RATE = 20             # physics ticks per second (bullet updates)
 SNAPSHOT_INTERVAL = 1.0    # seconds for full arena snapshot
+APP_VERSION = "1.0.0"
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/about')
+def about_page():
+    return render_template('about.html', version=APP_VERSION)
 
 @socketio.on('join')
 def on_join(data):

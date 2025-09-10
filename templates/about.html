@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Tank Game</title>
     <style>
-        body {
-            color: #000;
-        }
+        body { font-family: Arial, sans-serif; margin:40px; background:#fafafa; }
+        .card { max-width:480px; padding:24px; background:#fff; border:1px solid #ddd; border-radius:8px; }
+        h1 { margin-top:0; }
+        .ver { font-size:14px; color:#555; margin-top:4px; }
+        a { color:#1976d2; text-decoration:none; }
+        a:hover { text-decoration:underline; }
     </style>
 </head>
 <body>
-    <h1>About the Tank Game</h1>
-    <p>This is a prototype of the upcoming online multiplayer tank battle game.</p>
-    <p>Stay tuned for more updates!</p>
+  <div class="card">
+    <h1>About This Game</h1>
+    <div class="ver">Version: {{ version }}</div>
+    <p>A simple real-time multiplayer tank prototype using Flask + Socket.IO.</p>
+    <p><a href="/">Return to game</a></p>
+  </div>
 </body>
 </html>
